@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import MovieCards from "./MovieCards";
+import MovieModal from "./MovieModal";
+import "./MovieSection.css";
 
 function MoviesSection() {
   const [movies, setMovies] = useState([]);
+  const [clickedMovie, setClickedMovie] = useState(null);
 
   useEffect(() => {
     async function getMovies() {
@@ -18,7 +21,11 @@ function MoviesSection() {
   return (
     <section className="movies-section">
       <h2>Popular Movies</h2>
-      {<MovieCards movies={movies} />}
+      {<MovieCards movies={movies} onMovieClick={setClickedMovie} />}
+
+      {clickedMovie &&  (
+        <MovieModal movie={clickedMovie} onClose={()=> setClickedMovie(null)} />
+      )}
     </section>
   );
 }
