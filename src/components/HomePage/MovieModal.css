@@ -1,0 +1,37 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0; /* full screen */
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+
+.modal-content {
+  background: #111;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.modal-content img {
+  width: 250px;        /* control size */
+  height: auto;        /* keep aspect ratio */
+  border-radius: 10px;
+}
+
+.movie-details {
+  flex: 1;
+}
+
+
