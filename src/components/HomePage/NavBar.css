@@ -34,16 +34,36 @@
   margin-left: auto;
 }
 
-/* Style buttons */
-.buttons button {
-  padding: 8px 14px;
-  background-color: #222;
+.buttons a {
+  text-decoration: none;
   color: white;
-  border: 1px solid #444;
-  border-radius: 6px;
-  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius:
+   20px;
+  transition: all 0.2s ease;
+}
+.buttons a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f5c518; /* cinematic gold */
 }
 
-.buttons button:hover {
-  background-color: #333;
+.buttons a {
+  position: relative;
+}
+
+.buttons a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #f5c518;
+  transition: width 0.3s ease;
+}
+
+.buttons a:hover::after {
+  width: 100%;
 }

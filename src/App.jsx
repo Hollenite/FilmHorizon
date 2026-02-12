@@ -1,10 +1,13 @@
 import "./App.css";
 import HomePage from "./components/HomePage/HomePage";
 import NavBar from "./components/HomePage/NavBar";
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import Favorites from "./components/Favorites/Favorites";
+import Mood from "./components/Mood/Mood";
 
 function App() {
-    async function fetchQuery(query) {
+  async function fetchQuery(query) {
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_TMDB_API_KEY}&query=${query}`;
     const data = await fetch(url);
     const json = await data.json();
@@ -12,7 +15,7 @@ function App() {
     setMovies(json.results);
   }
 
-    const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     async function getMovies() {
@@ -26,10 +29,18 @@ function App() {
   }, []);
   return (
     <>
-    <NavBar fetchQuery={fetchQuery} />
-    <HomePage movies={movies} setMovies={setMovies} />
+      <NavBar fetchQuery={fetchQuery} />
+
+      <Routes>
+        <Route
+          path="/"
+          element={<HomePage movies={movies} setMovies={setMovies} />}
+        />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/mood" element={<Mood />} />
+      </Routes>
     </>
-  )
+  );
 }
 
 export default App;

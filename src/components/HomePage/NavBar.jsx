@@ -1,5 +1,6 @@
 import "./NavBar.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar({fetchQuery}) {
   return (
@@ -39,9 +40,9 @@ function Buttons({ className }) {
   return (
     <>
       <div className={className}>
-        <button className="Home">Home</button>
-        <button className="Favorites">Favorities</button>
-        <button className="mood">Mood</button>
+        <Link to='/'>Home</Link>
+        <Link to='/favorites'>Favorites</Link>
+        <Link to='/mood'>Mood</Link>
       </div>
     </>
   );
