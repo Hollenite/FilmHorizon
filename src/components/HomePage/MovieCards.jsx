@@ -2,6 +2,11 @@ import React from "react";
 import "./MovieCards.css";
 
 function MovieCards({ movies, onMovieClick }) {
+  function displayDate(date) {
+    const arr = date.split("-");
+    const year = arr[0];
+    return year;
+  }
   return (
     <>
       <div className="movie-grid">
@@ -20,10 +25,12 @@ function MovieCards({ movies, onMovieClick }) {
               alt={movie.title}
             />
             <div className="info">
-              {movie.vote_average.toFixed(1)} 
-              <div className="tooltip"> 
+              {movie.vote_average.toFixed(1)}
+              <div className="tooltip">
                 Based on {movie.vote_count} votes
-              </div>
+                <p></p>
+                {displayDate(movie.release_date)}
+                </div>
             </div>
           </div>
         ))}
