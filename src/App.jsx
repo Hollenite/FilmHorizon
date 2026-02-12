@@ -16,6 +16,8 @@ function App() {
   }
 
   const [movies, setMovies] = useState([]);
+  const [favorites, setFavorites] = useState([]);
+  // const [mood, setMood] = useState([]);
 
   useEffect(() => {
     async function getMovies() {
@@ -34,7 +36,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<HomePage movies={movies} setMovies={setMovies} />}
+          element={<HomePage movies={movies} setMovies={setMovies} favorites={favorites} setFavorites={setFavorites} />}
         />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/mood" element={<Mood />} />
