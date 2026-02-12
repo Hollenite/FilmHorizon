@@ -1,9 +1,11 @@
-
+import "./Favorites.css";
 
 function Favorites() {
   return (
-    <div>test</div>
+    <>
+    <div class='container'> hello </div>
+    </>
   )
 }
 
-export default Favorites
+export default Favorites;
