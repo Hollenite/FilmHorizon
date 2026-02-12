@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -6,5 +8,5 @@
 
 body {
   margin: 0;
-  background-color: #000; /* or your app background */
+  background-color: #000;
 }

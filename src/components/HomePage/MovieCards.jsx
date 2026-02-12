@@ -20,7 +20,10 @@ function MovieCards({ movies, onMovieClick }) {
               alt={movie.title}
             />
             <div className="info">
-              <h3 className="movie-title">{movie.title}</h3>
+              {movie.vote_average.toFixed(1)} 
+              <div className="tooltip"> 
+                Based on {movie.vote_count} votes
+              </div>
             </div>
           </div>
         ))}

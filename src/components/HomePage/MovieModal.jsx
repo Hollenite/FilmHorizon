@@ -10,10 +10,10 @@ function MovieModal({ movie, onClose }) {
             alt={movie.title}
           />
           <div className="movie-details">
-            <p>{movie.title}</p>
-            <p>{movie.overview}</p>
+            <h2 className="movie-title">{movie.title}</h2>
+            <p></p>
+            <p>{movie.vote_average} / 10</p>
             <p>{movie.release_date}</p>
-            <p>{movie.vote_average}</p>
             <p>{movie.overview}</p>
           </div>
           <button className="close-button" onClick={onClose}>
