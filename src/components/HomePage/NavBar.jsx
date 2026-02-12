@@ -1,19 +1,37 @@
 import "./NavBar.css";
-function NavBar() {
+import { useState } from "react";
+
+function NavBar({fetchQuery}) {
   return (
     <>
       <nav className="nav-bar">
-        <SearchBar className="search-bar" />
+        <SearchBar className="search-bar" fetchQuery={fetchQuery} />
         <Buttons className="buttons" />
       </nav>
     </>
   );
 }
 
-function SearchBar({ className }) {
+function SearchBar({ className, fetchQuery }) {
+  const [query, setQuery] = useState("");
+
   return (
     <div className={className}>
-      <input type="text" placeholder="Search for a movie..." />
+      <input
+        type="text"
+        placeholder="Search for a movie..."
+        onChange={(e) => {
+          setQuery(e.target.value);
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            if (query.trim() === "") {
+              return;
+            }
+            fetchQuery(query);
+          }
+        }}
+      />
     </div>
   );
 }

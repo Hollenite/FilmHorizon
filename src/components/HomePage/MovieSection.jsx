@@ -3,8 +3,7 @@ import MovieCards from "./MovieCards";
 import MovieModal from "./MovieModal";
 import "./MovieSection.css";
 
-function MoviesSection() {
-  const [movies, setMovies] = useState([]);
+function MoviesSection({movies, setMovies}) {
   const [clickedMovie, setClickedMovie] = useState(null);
 
   useEffect(() => {
