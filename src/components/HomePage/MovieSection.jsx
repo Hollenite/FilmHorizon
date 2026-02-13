@@ -5,6 +5,7 @@ import "./MovieSection.css";
 
 function MoviesSection({ movies , favorites, setFavorites}) {
   const [clickedMovie, setClickedMovie] = useState(null);
+  
 
   return (
     <section className="movies-section">

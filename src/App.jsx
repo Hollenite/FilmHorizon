@@ -16,7 +16,14 @@ function App() {
   }
 
   const [movies, setMovies] = useState([]);
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(() => {
+    try {
+      const stored = localStorage.getItem("favorites");
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  });
   // const [mood, setMood] = useState([]);
 
   useEffect(() => {
@@ -29,6 +36,11 @@ function App() {
     }
     getMovies();
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
+
   return (
     <>
       <NavBar fetchQuery={fetchQuery} />
@@ -36,7 +48,14 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<HomePage movies={movies} setMovies={setMovies} favorites={favorites} setFavorites={setFavorites} />}
+          element={
+            <HomePage
+              movies={movies}
+              setMovies={setMovies}
+              favorites={favorites}
+              setFavorites={setFavorites}
+            />
+          }
         />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/mood" element={<Mood />} />
