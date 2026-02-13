@@ -57,7 +57,12 @@ function App() {
             />
           }
         />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route
+          path="/favorites"
+          element={
+            <Favorites favorites={favorites} setFavorites={setFavorites} />
+          }
+        />
         <Route path="/mood" element={<Mood />} />
       </Routes>
     </>
