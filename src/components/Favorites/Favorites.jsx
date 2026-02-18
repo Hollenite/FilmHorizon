@@ -14,7 +14,7 @@ function Favorites({ favorites, setFavorites }) {
   return (
     <div className="container">
       <h2>Your Favorites</h2>
-      <button onClick={() => setFavorites([])}>Clear All</button>
+      <button className="clear-button" onClick={() => setFavorites([])}>Clear All</button>
 
       <MovieCards
         movies={favorites}
