@@ -12,16 +12,22 @@ function Favorites({ favorites, setFavorites }) {
   }
 
   return (
-    <div className="container">
-      <h2>Your Favorites</h2>
-      <button className="clear-button" onClick={() => setFavorites([])}>Clear All</button>
+    <>
+      <div className="favorites-container">
+        <h2>Favorities</h2>
+        <button className="clear-button" onClick={() => setFavorites([])}>
+          Clear All
+        </button>
+      </div>
 
-      <MovieCards
-        movies={favorites}
-        favorites={favorites}
-        setFavorites={setFavorites}
-      />
-    </div>
+      <div className="container">
+        <MovieCards
+          movies={favorites}
+          favorites={favorites}
+          setFavorites={setFavorites}
+        />
+      </div>
+    </>
   );
 }
 
