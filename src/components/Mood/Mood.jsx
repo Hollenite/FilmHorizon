@@ -1,7 +1,7 @@
 import "./Mood.css";
 import { useState } from "react";
 import Groq from "groq-sdk";
-import MovieCards from "C:/Users/Ariyan/Desktop/FilmHorizon/src/components/HomePage/MovieCards.jsx";
+import MovieCards from "../HomePage/MovieCards.jsx";
 
 function Mood({ favorites, setFavorites }) {
   const [moodMovies, setMoodMovies] = useState([]);

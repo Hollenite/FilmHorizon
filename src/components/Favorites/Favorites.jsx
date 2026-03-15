@@ -1,5 +1,5 @@
 import "./Favorites.css";
-import MovieCards from "C:/Users/Ariyan/Desktop/FilmHorizon/src/components/HomePage/MovieCards.jsx";
+import MovieCards from "../HomePage/MovieCards.jsx";
 
 function Favorites({ favorites, setFavorites }) {
   if (favorites.length === 0) {
