@@ -1,0 +1,22 @@
+[33me45af84[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to origin/main
+[33m1404f32[m HEAD@{1}: commit: Remove env file and secure API key
+[33m05eaf9e[m HEAD@{2}: reset: moving to HEAD~1
+[33mf1f3236[m HEAD@{3}: commit (amend): remove env file from tracking
+[33m01aaa08[m HEAD@{4}: commit: remove env file from tracking
+[33m05eaf9e[m HEAD@{5}: commit: add intelligent mood system
+[33me45af84[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{6}: commit: add favorites
+[33m27314dc[m HEAD@{7}: commit: fix single movie bug
+[33m0e59400[m HEAD@{8}: commit: add favorites persistence
+[33m161c64d[m HEAD@{9}: commit: add a lot of things
+[33mcef5a39[m HEAD@{10}: commit: fix A lot of bugs
+[33m2be7537[m HEAD@{11}: commit: fix button bug
+[33ma804331[m HEAD@{12}: commit: add page routing
+[33m4b35066[m HEAD@{13}: commit: add routing and fix heirarchy
+[33ma02feff[m HEAD@{14}: commit: remove null posters
+[33mf987e52[m HEAD@{15}: commit: made navbar fixed
+[33m9cca0bd[m HEAD@{16}: commit: polish ui
+[33md0dd68d[m HEAD@{17}: commit: update UI
+[33m4b20af3[m HEAD@{18}: commit: remove defaut root css
+[33me02b6c1[m HEAD@{19}: commit: add click reg
+[33m7bc5cbf[m HEAD@{20}: commit: update the project
+[33m4e7b63d[m HEAD@{21}: commit (initial): make homepage better
